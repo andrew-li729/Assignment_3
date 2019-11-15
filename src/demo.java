@@ -13,5 +13,7 @@ public class demo {
         itemName=input.nextLine();
         Item i2=new Item(itemCode,itemName);
         i2.Display();
+        Grocery g1=new Grocery(itemCode,itemName,20,1,10);
+        g1.displayGrocery();
     }
 }
