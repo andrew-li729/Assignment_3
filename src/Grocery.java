@@ -12,18 +12,18 @@ public class Grocery extends Item implements Discount {
 
 
     public double computeDiscount() {
-        discount = price * (discount / 100);
+        discount = price*units*(discount / 100);
         return discount;
     }
 
     double computeTotalPrice(){
         double finalPrice;
-        finalPrice=units*price-discount;
+        finalPrice=(units*price)-discount;
         return finalPrice;
     }
 
     public void displayGrocery(){
-        System.out.println("Item total Price: "+computeTotalPrice());
+        System.out.println("Units: "+units+" Price: $"+price+" Discount $"+computeDiscount()+" Item total Price: $"+computeTotalPrice());
     }
 
 }
